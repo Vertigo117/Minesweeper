@@ -1,0 +1,15 @@
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csprojResolveAssemblyReference.cache
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\App.g.cs
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper_MarkupCompile.cache
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\MainWindow.g.cs
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper_MarkupCompile.lref
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\MainWindow.baml
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.g.resources
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.Cache
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb

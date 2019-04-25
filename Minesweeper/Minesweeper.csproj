@@ -88,12 +88,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <None Include="Ten.wav" />
     <None Include="Minesweeper_flag.svg.png" />
     <None Include="bomb.png" />
     <None Include="MineExploded.jpg" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

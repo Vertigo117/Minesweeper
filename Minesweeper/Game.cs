@@ -13,6 +13,7 @@ namespace Minesweeper
     {
         public event EventHandler DismantledMinesChanged;
         public event EventHandler Tick;
+        public event EventHandler Victory;
 
         private int dismantledMines;
         Timer timer;
@@ -139,6 +140,7 @@ namespace Minesweeper
             {
                 timer.Enabled = false;
                 Panel.Enabled = false;
+                Victory(this,new EventArgs());
             }
         }
 

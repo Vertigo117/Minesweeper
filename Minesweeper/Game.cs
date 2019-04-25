@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace Minesweeper
 {
     class Game
@@ -181,11 +182,12 @@ namespace Minesweeper
                 s.RemoveEvents();
                 if (s.Mined)
                 {
-                    s.Button.Text = "*";
                     
-                    s.Button.Font = new Font("Arial Black", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-                    
-                    s.Button.ForeColor = Color.Black;
+
+                    Images mineImage = new Images();
+                    s.Button.Image = mineImage.Mine;
+
+
                 }
             }
         }

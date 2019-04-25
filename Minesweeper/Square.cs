@@ -30,8 +30,8 @@ namespace Minesweeper
         public Square(Game game, int x,int y)
         {
             this.game = game;
-            this.X = x;
-            this.Y = y;
+            X = x;
+            Y = y;
             Button = new Button();
             Button.Text = "";
 
@@ -43,6 +43,7 @@ namespace Minesweeper
             Button.Left = w * X;
             Button.Top = h * Y;
             Button.Font = new Font("Arial Black", 9F, FontStyle.Regular, GraphicsUnit.Point,0);
+            Button.BackColor = Color.Silver;
             Button.Click += new EventHandler(Click);
             Button.MouseDown += new MouseEventHandler(DismantleClick);
 
@@ -53,15 +54,24 @@ namespace Minesweeper
         {
             if (!Opened && e.Button == MouseButtons.Right)
             {
-                if (Dismantled)
+                if (Dismantled&&Button.Text!="?")
                 {
                     Dismantled = false;
-                    Button.BackColor = SystemColors.Control;
+                    Button.BackColor = Color.Silver;
+                    Button.Image = null;
                     Button.Text = "?";
                 }
+                //else if (Button.Text == "?")
+                //{
+                //    Dismantled = false;
+                //    Button.Text = "";
+                //}
                 else
                 {
+                    Button.Text = "";
                     Dismantled = true;
+                    Images img = new Images();
+                    Button.Image = img.Flag;
                     Button.BackColor = Color.Green;
                 }
 
@@ -159,11 +169,13 @@ namespace Minesweeper
                 if (Mined)
                 {
                     Button.BackColor = Color.Red;
+                    Images mineImage = new Images();
+                    Button.Image = mineImage.MineExploded;
                     OnExplode();
                 }
                 else
                 {
-                    this.Open();
+                    Open();
                 }
             }
         }

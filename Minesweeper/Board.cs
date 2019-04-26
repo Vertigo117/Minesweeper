@@ -54,12 +54,12 @@ namespace Minesweeper
         {
             if (!Opened && e.Button == MouseButtons.Right)
             {
-                if (Dismantled&&Button.Text!="?")
+                if (Dismantled)
                 {
                     Dismantled = false;
                     Button.BackColor = Color.Silver;
                     Button.Image = null;
-                    Button.Text = "?";
+                    //Button.Text = "?";
                 }
                 //else if (Button.Text == "?")
                 //{
@@ -68,7 +68,7 @@ namespace Minesweeper
                 //}
                 else
                 {
-                    Button.Text = "";
+                    
                     Dismantled = true;
                     Images img = new Images();
                     Button.Image = img.Flag;

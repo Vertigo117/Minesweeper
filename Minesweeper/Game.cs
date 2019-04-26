@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 
 namespace Minesweeper
@@ -14,15 +15,21 @@ namespace Minesweeper
         public event EventHandler DismantledMinesChanged;
         public event EventHandler Tick;
         public event EventHandler Victory;
+        public event EventHandler Defeat;
 
         private int dismantledMines;
         Timer timer;
         Square[,] squares;
         private int incorrectDismantledMines;
-        public int time;
+        //public int second;
+        public DateTime stopwatch;
+        private DateTime date;
+
 
         public Game(Panel panel,int width,int height,int mines)
         {
+            //stopwatch = DateTime.Now;
+            date = DateTime.Now;
             Panel = panel;
             Width = width;
             Height = height;
@@ -57,7 +64,8 @@ namespace Minesweeper
         {
 
             //Panel.SuspendLayout();
-            time = 0;
+            //second = 0;
+            
             dismantledMines = 0;
             incorrectDismantledMines = 0;
             OnTick();
@@ -98,12 +106,18 @@ namespace Minesweeper
             timer = new Timer();
             timer.Interval = 1000;
             timer.Tick += new EventHandler(TimerTick);
-            timer.Enabled = true;
+            //timer.Enabled = true;
+            timer.Start();
         }
 
         private void TimerTick(object sender, EventArgs e)
         {
-            time++;
+            //second++;
+            //timeCounter.AddSeconds(second);
+            //stopwatch.Start();
+            long tick = DateTime.Now.Ticks - date.Ticks;
+            stopwatch = new DateTime();
+            stopwatch = stopwatch.AddTicks(tick);
             OnTick();
         }
 
@@ -138,7 +152,7 @@ namespace Minesweeper
 
             if(dismantledMines==Mines)
             {
-                timer.Enabled = false;
+                timer.Stop();
                 Panel.Enabled = false;
                 Victory(this,new EventArgs());
             }
@@ -177,7 +191,8 @@ namespace Minesweeper
 
         private void Explode(object sender, EventArgs e)
         {
-            timer.Enabled = false;
+            timer.Stop();
+            Defeat(this,new EventArgs());
 
             foreach (Square s in squares)
             {

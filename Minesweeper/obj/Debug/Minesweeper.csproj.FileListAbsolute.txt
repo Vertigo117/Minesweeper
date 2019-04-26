@@ -18,3 +18,13 @@ C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.Co
 C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
 C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb
 C:\Users\Vertigo\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csprojResolveAssemblyReference.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe.config
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.exe
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\bin\Debug\Minesweeper.pdb
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csprojAssemblyReference.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Form1.resources
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.Properties.Resources.resources
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.GenerateResource.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.csproj.CoreCompileInputs.cache
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.exe
+\\msk.mts.ru\ug\User\Folders\06\00\avtimche\Desktop\Minesweeper\Minesweeper\obj\Debug\Minesweeper.pdb

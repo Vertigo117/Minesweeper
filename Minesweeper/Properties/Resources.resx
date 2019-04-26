@@ -130,4 +130,7 @@
   <data name="Ten" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Ten.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="war_never_changes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\war_never_changes.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

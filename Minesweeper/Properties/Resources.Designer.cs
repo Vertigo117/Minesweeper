@@ -98,5 +98,14 @@ namespace Minesweeper.Properties {
                 return ResourceManager.GetStream("Ten", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream war_never_changes {
+            get {
+                return ResourceManager.GetStream("war_never_changes", resourceCulture);
+            }
+        }
     }
 }

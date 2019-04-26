@@ -59,6 +59,11 @@
     <Compile Include="Images.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Square.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -72,11 +77,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -88,13 +88,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
-    <None Include="Flag.png" />
+    <None Include="Images\Smiley_scared.png" />
+    <None Include="Images\Smiley_original.png" />
+    <None Include="Images\Smiley_dead.png" />
+    <None Include="Images\Smiley_cool.png" />
+    <None Include="Images\Flag.png" />
     <None Include="darkSouls.wav" />
-    <None Include="MineCrossed.png" />
+    <None Include="Images\MineCrossed.png" />
     <None Include="war_never_changes.wav" />
     <None Include="Ten.wav" />
-    <None Include="Mine.png" />
-    <None Include="MineExploded.jpg" />
+    <None Include="Images\Mine.png" />
+    <None Include="Images\MineExploded.jpg" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

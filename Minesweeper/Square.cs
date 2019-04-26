@@ -17,6 +17,8 @@ namespace Minesweeper
 
         Game game;
 
+        Images img = new Images();
+
         public bool Dismantled { get; private set; }
 
         public bool Mined { get; set; }
@@ -48,13 +50,16 @@ namespace Minesweeper
             Button.BackColor = Color.Gray;
             Button.FlatStyle = FlatStyle.Flat;
             Button.Click += new EventHandler(Click);
+           
             Button.MouseDown += new MouseEventHandler(DismantleClick);
+            
 
             game.Panel.Controls.Add(Button);
         }
 
         private void DismantleClick(object sender, MouseEventArgs e)
         {
+            
             if (!Opened && e.Button == MouseButtons.Right)
             {
                 if (Dismantled)
@@ -79,6 +84,10 @@ namespace Minesweeper
                 }
 
                 OnDismantle();
+            }
+            else
+            {
+                game.Button.Image = img.SmileyScared;
             }
         }
 
@@ -171,10 +180,13 @@ namespace Minesweeper
                     game.OpenSpot(X + 1, Y + 1);
                 }
             }
+            game.Button.Image = img.SmileyOriginal;
         }
 
         private void Click(object sender, EventArgs e)
         {
+            
+            
             if (!Dismantled)
             {
                 if (Mined)

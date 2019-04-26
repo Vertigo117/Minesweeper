@@ -16,6 +16,7 @@ namespace Minesweeper
         public event EventHandler Tick;
         public event EventHandler Victory;
         public event EventHandler Defeat;
+        
 
         private int dismantledMines;
         Timer timer;
@@ -26,7 +27,7 @@ namespace Minesweeper
         private DateTime date;
 
 
-        public Game(Panel panel,int width,int height,int mines)
+        public Game(Panel panel,int width,int height,int mines, Button button)
         {
             //stopwatch = DateTime.Now;
             date = DateTime.Now;
@@ -34,7 +35,11 @@ namespace Minesweeper
             Width = width;
             Height = height;
             Mines = mines;
+            Button = button;
+
         }
+
+        public Button Button { get; }
 
         public Panel Panel { get; }
 
@@ -124,6 +129,7 @@ namespace Minesweeper
         private void Dismantle(object sender, EventArgs e)
         {
             Square s = (Square)sender;
+            
 
             if(s.Dismantled)
             {
@@ -188,6 +194,8 @@ namespace Minesweeper
                 }
             }
         }
+
+        
 
         private void Explode(object sender, EventArgs e)
         {

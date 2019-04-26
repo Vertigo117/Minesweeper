@@ -16,6 +16,7 @@ namespace Minesweeper
     {
         Stream str; 
         SoundPlayer sp;
+        Images img = new Images();
 
         public Form1()
         {
@@ -23,27 +24,34 @@ namespace Minesweeper
             str = Properties.Resources.war_never_changes;
             sp = new SoundPlayer(str);
             sp.Play();
+
+            button1.Image = img.SmileyOriginal;
+
         }
 
 
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
 
-            Game game = new Game(panel1, 10, 10, 10);
+            button1.Image = img.SmileyOriginal;
+            Game game = new Game(panel1, 10, 10, 10,button1);
             game.Tick += (sender1, e1) => labelTime.Text = string.Format("{0:mm:ss}", game.stopwatch);
             game.DismantledMinesChanged += (sender1,e1)=> labelBombs.Text = (game.Mines - game.DismantledMines).ToString();
             game.Victory += new EventHandler(Victory_Handler);
             game.Defeat += new EventHandler(Defeat_Handler);
+            
             game.Start();
         }
+
+       
 
         private void Defeat_Handler(object sender, EventArgs e)
         {
             str = Properties.Resources.darkSouls;
             sp = new SoundPlayer(str);
             sp.Play();
+            button1.Image = img.SmileyDead;
             //MessageBox.Show("Defeat!");
         }
 
@@ -53,7 +61,10 @@ namespace Minesweeper
             str = Properties.Resources.Ten;
             sp = new SoundPlayer(str);
             sp.Play();
+            button1.Image = img.SmileyCool;
             //MessageBox.Show("Victory!!!");
         }
+
+
     }
 }

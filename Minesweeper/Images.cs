@@ -10,22 +10,22 @@ namespace Minesweeper
     class Images
     {
 
-        private Image mine = Properties.Resources.bomb;
+        private Image mine = Properties.Resources.Mine;
         private Image mineExploded = Properties.Resources.MineExploded;
-        private Image flag = Properties.Resources.flag;
-        private Image mineDismantled = Properties.Resources.bomb_dismantled;
+        private Image flag = Properties.Resources.Flag;
+        private Image mineCrossed = Properties.Resources.MineCrossed;
 
         public Bitmap Mine { get; private set; }
         public Bitmap MineExploded { get; private set; }
         public Bitmap Flag { get; private set; }
-        public Bitmap MineDismantled { get; private set; }
+        public Bitmap MineCrossed { get; private set; }
 
         public Images()
         {
             Mine = new Bitmap(mine, new Size(15, 15));
             MineExploded = new Bitmap(mineExploded, new Size(15, 15));
             Flag = new Bitmap(flag, new Size(20,20));
-            MineDismantled = new Bitmap(mineDismantled, new Size(15, 15));
+            MineCrossed = new Bitmap(mineCrossed, new Size(15, 15));
         }
         //public Image Mine
         //{

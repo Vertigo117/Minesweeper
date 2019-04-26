@@ -10,7 +10,7 @@ namespace Minesweeper
 {
     
 
-    class Board
+    class Square
     {
         public event EventHandler Dismantle;
         public event EventHandler Explode;
@@ -29,7 +29,7 @@ namespace Minesweeper
 
         public int Y { get; }
 
-        public Board(Game game, int x,int y)
+        public Square(Game game, int x,int y)
         {
             this.game = game;
             X = x;

@@ -19,7 +19,7 @@ namespace Minesweeper
 
         private int dismantledMines;
         Timer timer;
-        Board[,] squares;
+        Square[,] squares;
         private int incorrectDismantledMines;
         //public int second;
         public DateTime stopwatch;
@@ -73,12 +73,12 @@ namespace Minesweeper
             Panel.Controls.Clear();
 
             // Кнопочки
-            squares = new Board[Width, Height];
+            squares = new Square[Width, Height];
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    Board s = new Board(this, x, y);
+                    Square s = new Square(this, x, y);
                     s.Explode += new EventHandler(Explode);
                     s.Dismantle += new EventHandler(Dismantle);
                     squares[x, y] = s;
@@ -93,7 +93,7 @@ namespace Minesweeper
                 int x = r.Next(Width);
                 int y = r.Next(Height);
 
-                Board s = squares[x, y];
+                Square s = squares[x, y];
                 if (!s.Mined)
                 {
                     s.Mined = true;
@@ -123,7 +123,7 @@ namespace Minesweeper
 
         private void Dismantle(object sender, EventArgs e)
         {
-            Board s = (Board)sender;
+            Square s = (Square)sender;
 
             if(s.Dismantled)
             {
@@ -191,18 +191,18 @@ namespace Minesweeper
 
         private void Explode(object sender, EventArgs e)
         {
+            Images img = new Images();
             timer.Stop();
             Defeat(this,new EventArgs());
 
-            foreach (Board s in squares)
+            foreach (Square s in squares)
             {
                 s.RemoveEvents();
                 if (s.Mined)
                 {
-                    Images img = new Images();
                     
-                    s.Button.FlatStyle = FlatStyle.Standard;
-                    s.Button.BackColor = SystemColors.ControlLight;
+                    
+                    
 
 
 
@@ -210,16 +210,29 @@ namespace Minesweeper
                     {
                         
                         s.Button.Image = img.Mine;
+                        s.Button.FlatStyle = FlatStyle.Standard;
+                        s.Button.BackColor = SystemColors.ControlLight;
                         //s.Button.BackColor = SystemColors.ControlLight;
                     }
                     else
                     {
-                        s.Button.Image = img.MineDismantled;
+                        s.Button.Image = img.Flag;
                         //s.Button.FlatStyle = FlatStyle.Flat;
                     }
 
 
                 }
+                else
+                {
+                    if(s.Dismantled)
+                    {
+                        s.Button.Image = img.MineCrossed;
+                        s.Button.FlatStyle = FlatStyle.Standard;
+                        s.Button.BackColor = SystemColors.ControlLight;
+                    }
+                }
+
+                
             }
         }
 

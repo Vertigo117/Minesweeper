@@ -35,7 +35,7 @@ namespace Minesweeper
             X = x;
             Y = y;
             Button = new Button();
-            Button.Text = "";
+            
 
             int w = this.game.Panel.Width / this.game.Width;
             int h = this.game.Panel.Height / this.game.Height;
@@ -45,7 +45,8 @@ namespace Minesweeper
             Button.Left = w * X;
             Button.Top = h * Y;
             Button.Font = new Font("Arial Black", 9F, FontStyle.Regular, GraphicsUnit.Point,0);
-            Button.BackColor = Color.Silver;
+            Button.BackColor = Color.Gray;
+            Button.FlatStyle = FlatStyle.Flat;
             Button.Click += new EventHandler(Click);
             Button.MouseDown += new MouseEventHandler(DismantleClick);
 
@@ -103,6 +104,9 @@ namespace Minesweeper
         {
             if (!Opened && !Dismantled)
             {
+                Button.FlatStyle = FlatStyle.Standard;
+                Button.BackColor = SystemColors.ControlLight;
+
                 Opened = true;
                 // Подсчёт бомб
                 int c = 0;
@@ -118,7 +122,9 @@ namespace Minesweeper
 
                 if (c > 0)
                 {
+                    
                     Button.Text = c.ToString();
+
                     switch (c)
                     {
                         case 1:
@@ -149,8 +155,9 @@ namespace Minesweeper
                 }
                 else
                 {
-                    Button.BackColor = SystemColors.ControlLight;
-                    Button.FlatStyle = FlatStyle.Flat;
+                    
+                    //Button.FlatStyle = FlatStyle.Flat;
+                    
                     Button.Enabled = false;
 
                     game.OpenSpot(X - 1, Y - 1);
@@ -172,12 +179,13 @@ namespace Minesweeper
             {
                 if (Mined)
                 {
-                    Button.BackColor = Color.Red;
-                    Button.FlatStyle = FlatStyle.Flat;
+                    
+                    //Button.FlatStyle = FlatStyle.Flat;
                     //Button.Enabled = false;
                     Images mineImage = new Images();
                     Button.Image = mineImage.MineExploded;
                     OnExplode();
+                    Button.BackColor = Color.Red;
                 }
                 else
                 {

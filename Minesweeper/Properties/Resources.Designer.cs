@@ -92,9 +92,9 @@ namespace Minesweeper.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap MineExploded {
+        internal static System.Drawing.Bitmap flag {
             get {
-                object obj = ResourceManager.GetObject("MineExploded", resourceCulture);
+                object obj = ResourceManager.GetObject("flag", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -102,9 +102,9 @@ namespace Minesweeper.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Minesweeper_flag_svg {
+        internal static System.Drawing.Bitmap MineExploded {
             get {
-                object obj = ResourceManager.GetObject("Minesweeper_flag_svg", resourceCulture);
+                object obj = ResourceManager.GetObject("MineExploded", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -201,8 +201,11 @@ namespace Minesweeper
                 {
                     Images img = new Images();
                     
-                    s.Button.FlatStyle = FlatStyle.Flat;
-                    //s.Button.Enabled = false;
+                    s.Button.FlatStyle = FlatStyle.Standard;
+                    s.Button.BackColor = SystemColors.ControlLight;
+
+
+
                     if (!s.Dismantled)
                     {
                         

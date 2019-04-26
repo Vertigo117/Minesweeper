@@ -88,6 +88,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.ico" />
+    <None Include="darkSouls.wav" />
+    <None Include="bomb_dismantled.png" />
     <None Include="war_never_changes.wav" />
     <None Include="Ten.wav" />
     <None Include="Minesweeper_flag.svg.png" />

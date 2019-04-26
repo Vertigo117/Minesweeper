@@ -13,16 +13,19 @@ namespace Minesweeper
         private Image mine = Properties.Resources.bomb;
         private Image mineExploded = Properties.Resources.MineExploded;
         private Image flag = Properties.Resources.Minesweeper_flag_svg;
+        private Image mineDismantled = Properties.Resources.bomb_dismantled;
 
         public Bitmap Mine { get; private set; }
         public Bitmap MineExploded { get; private set; }
         public Bitmap Flag { get; private set; }
+        public Bitmap MineDismantled { get; private set; }
 
         public Images()
         {
             Mine = new Bitmap(mine, new Size(15, 15));
             MineExploded = new Bitmap(mineExploded, new Size(15, 15));
             Flag = new Bitmap(flag, new Size(17, 17));
+            MineDismantled = new Bitmap(mineDismantled, new Size(15, 15));
         }
         //public Image Mine
         //{

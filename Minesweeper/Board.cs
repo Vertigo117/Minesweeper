@@ -8,6 +8,8 @@ using System.Windows.Forms;
 
 namespace Minesweeper
 {
+    
+
     class Board
     {
         public event EventHandler Dismantle;
@@ -72,7 +74,7 @@ namespace Minesweeper
                     Dismantled = true;
                     Images img = new Images();
                     Button.Image = img.Flag;
-                    Button.BackColor = Color.Green;
+                    //Button.BackColor = Color.Green;
                 }
 
                 OnDismantle();
@@ -89,6 +91,8 @@ namespace Minesweeper
 
         protected void OnExplode()
         {
+            
+
             if (Explode != null)
             {
                 Explode(this, new EventArgs());
@@ -169,6 +173,8 @@ namespace Minesweeper
                 if (Mined)
                 {
                     Button.BackColor = Color.Red;
+                    Button.FlatStyle = FlatStyle.Flat;
+                    //Button.Enabled = false;
                     Images mineImage = new Images();
                     Button.Image = mineImage.MineExploded;
                     OnExplode();

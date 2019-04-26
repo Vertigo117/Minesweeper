@@ -199,10 +199,21 @@ namespace Minesweeper
                 s.RemoveEvents();
                 if (s.Mined)
                 {
+                    Images img = new Images();
                     
-
-                    Images mineImage = new Images();
-                    s.Button.Image = mineImage.Mine;
+                    s.Button.FlatStyle = FlatStyle.Flat;
+                    //s.Button.Enabled = false;
+                    if (!s.Dismantled)
+                    {
+                        
+                        s.Button.Image = img.Mine;
+                        //s.Button.BackColor = SystemColors.ControlLight;
+                    }
+                    else
+                    {
+                        s.Button.Image = img.MineDismantled;
+                        //s.Button.FlatStyle = FlatStyle.Flat;
+                    }
 
 
                 }

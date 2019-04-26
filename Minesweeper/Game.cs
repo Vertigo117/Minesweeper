@@ -19,7 +19,7 @@ namespace Minesweeper
 
         private int dismantledMines;
         Timer timer;
-        Square[,] squares;
+        Board[,] squares;
         private int incorrectDismantledMines;
         //public int second;
         public DateTime stopwatch;
@@ -72,20 +72,20 @@ namespace Minesweeper
             Panel.Enabled = true;
             Panel.Controls.Clear();
 
-            // Create Spots
-            squares = new Square[Width, Height];
+            // Кнопочки
+            squares = new Board[Width, Height];
             for (int x = 0; x < Width; x++)
             {
                 for (int y = 0; y < Height; y++)
                 {
-                    Square s = new Square(this, x, y);
+                    Board s = new Board(this, x, y);
                     s.Explode += new EventHandler(Explode);
                     s.Dismantle += new EventHandler(Dismantle);
                     squares[x, y] = s;
                 }
             }
 
-            // Place Mines
+            // Мины
             int b = 0;
             Random r = new Random();
             while (b < Mines)
@@ -93,7 +93,7 @@ namespace Minesweeper
                 int x = r.Next(Width);
                 int y = r.Next(Height);
 
-                Square s = squares[x, y];
+                Board s = squares[x, y];
                 if (!s.Mined)
                 {
                     s.Mined = true;
@@ -123,7 +123,7 @@ namespace Minesweeper
 
         private void Dismantle(object sender, EventArgs e)
         {
-            Square s = (Square)sender;
+            Board s = (Board)sender;
 
             if(s.Dismantled)
             {
@@ -194,7 +194,7 @@ namespace Minesweeper
             timer.Stop();
             Defeat(this,new EventArgs());
 
-            foreach (Square s in squares)
+            foreach (Board s in squares)
             {
                 s.RemoveEvents();
                 if (s.Mined)

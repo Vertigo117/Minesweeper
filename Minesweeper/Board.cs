@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Minesweeper
 {
-    class Square
+    class Board
     {
         public event EventHandler Dismantle;
         public event EventHandler Explode;
@@ -27,7 +27,7 @@ namespace Minesweeper
 
         public int Y { get; }
 
-        public Square(Game game, int x,int y)
+        public Board(Game game, int x,int y)
         {
             this.game = game;
             X = x;

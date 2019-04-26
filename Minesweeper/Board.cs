@@ -60,7 +60,7 @@ namespace Minesweeper
                 if (Dismantled)
                 {
                     Dismantled = false;
-                    Button.BackColor = Color.Silver;
+                    
                     Button.Image = null;
                     //Button.Text = "?";
                 }
